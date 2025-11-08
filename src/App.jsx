@@ -3,9 +3,7 @@ import './App.css'
 
 function App() {
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault()
-    }}>
+    <form>
       <GeneralInfo />
       <EducationInfo />
       <PracticalExperience />

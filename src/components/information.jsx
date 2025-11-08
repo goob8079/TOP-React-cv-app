@@ -95,7 +95,7 @@ export function PracticalExperience() {
     const [company, setCompany] = useState('');
     const [positionTitle, setPositionTitle] = useState('');
     const [responsibilities, setResposibilities] = useState('');
-    const [datesWorked, setDatesWorked] = useState('');
+    const [datesWorked, setDatesWorked] = useState('Ex. March 15, 2018 - July 20, 2021');
 
     function handleCompanyInput(e) {
         setCompany(e.target.value);
@@ -139,7 +139,6 @@ export function PracticalExperience() {
             <label>
                 Dates Worked={''}
                 <input 
-                    defaultValue='Ex. March 15, 2018 - July 20, 2021'
                     value={datesWorked}
                     onInput={handleDatesWorkedInput}
                 />
