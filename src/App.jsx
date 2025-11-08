@@ -1,14 +1,11 @@
-import { GeneralInfo, EducationInfo, PracticalExperience } from './components/information'
-import './App.css'
+import './App.css';
+import { Form } from './components/form';
 
 function App() {
   return (
-    <form>
-      <GeneralInfo />
-      <EducationInfo />
-      <PracticalExperience />
-      <button type='submit'>Submit</button>
-    </form>
+    <>
+      <Form />
+    </>
   )
 }
 

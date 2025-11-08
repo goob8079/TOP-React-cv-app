@@ -47,70 +47,41 @@ export function GeneralInfo() {
     );
 }
 
-export function EducationInfo() {
-    const [school, setSchool] = useState('');
-    const [degree, setDegree] = useState('');
-    const [dates, setDates] = useState('');
-
-    function handleSchoolInput(e) {
-        setSchool(e.target.value);
-    }
-
-    function handleDegreeInput(e) {
-        setDegree(e.target.value);
-    }
-
-    function handleDateInput(e) {
-        setDates(e.target.value);
-    }
-
+export function EducationInfo({ education, onChange }) {
+    function handleChange(field, val) {
+        onChange({ ...education, [field]: val });
+    } 
+    
     return (
         <section className="education-info">
             <label>
                 School:{''}
                 <input
-                    value={school}
-                    onInput={handleSchoolInput}
+                    value={education.school}
+                    onInput={(e) => handleChange('school', e.target.value)}
                 />
             </label>
             <label>
                 Degree:{''}
                 <input
-                    value={degree}
-                    onInput={handleDegreeInput}
+                    value={education.degree}
+                    onInput={(e) => handleChange('degree', e.target.value)}
                 />
             </label>
             <label>
                 Date:{''}
                 <input
-                    value={dates}
-                    onInput={handleDateInput}
+                    value={education.dates}
+                    onInput={(e) => handleChange('dates', e.target.value)}
                 />
             </label>
         </section>
     );
 }
 
-export function PracticalExperience() {
-    const [company, setCompany] = useState('');
-    const [positionTitle, setPositionTitle] = useState('');
-    const [responsibilities, setResposibilities] = useState('');
-    const [datesWorked, setDatesWorked] = useState('Ex. March 15, 2018 - July 20, 2021');
-
-    function handleCompanyInput(e) {
-        setCompany(e.target.value);
-    }
-
-    function handlePositionInput(e) {
-        setPositionTitle(e.target.value);
-    }
-
-    function handleResponsibilitiesInput(e) {
-        setResposibilities(e.target.value);
-    }
-    
-    function handleDatesWorkedInput(e) {
-        setDatesWorked(e.target.value);
+export function PracticalExperience({ experience, onChange }) {
+    function handleChange(field, val) {
+        onChange({ ...experience, [field]: val });
     }
 
     return (
@@ -118,29 +89,29 @@ export function PracticalExperience() {
             <label>
                 Company={''}
                 <input 
-                    value={company}
-                    onInput={handleCompanyInput}
+                    value={experience.company}
+                    onInput={(e) => handleChange('company', e.target.value)}
                 />
             </label>
             <label>
                 Position Title={''}
                 <input 
-                    value={positionTitle}
-                    onInput={handlePositionInput}
+                    value={experience.positionTitle}
+                    onInput={(e) => handleChange('positionTitle', e.target.value)}
                 />
             </label>
             <label>
                 Responsibilities={''}
                 <textarea 
-                    value={responsibilities}
-                    onInput={handleResponsibilitiesInput}
+                    value={experience.responsibilities}
+                    onInput={(e) => handleChange('resposibilities', e.target.value)}
                 />
             </label>
             <label>
                 Dates Worked={''}
                 <input 
-                    value={datesWorked}
-                    onInput={handleDatesWorkedInput}
+                    value={experience.datesWorked}
+                    onInput={(e) => handleChange('datesWorked', e.target.value)}
                 />
             </label>
         </section>
