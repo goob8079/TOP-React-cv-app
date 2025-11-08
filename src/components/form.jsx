@@ -21,6 +21,8 @@ export function Form() {
         <form>
             <section>
                 <ul className="education-list">
+                    {/* loop through the educationList and
+                    add the new edu object to the ul element as an li element */}
                     {educationList.map((edu, index) => (
                         <li key={educationKey}>
                             <EducationInfo 
@@ -36,6 +38,8 @@ export function Form() {
                     <button type="button" onClick={addEducation}>Add Education</button>
                 </ul>
                 <ul className="experience-list">
+                    {/* loop through the experienceList and
+                    add the new exp object to the ul element as an li element */}
                     {experienceList.map((exp, index) => (
                         <li key={experienceKey}>
                             <PracticalExperience
