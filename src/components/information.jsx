@@ -46,3 +46,104 @@ export function GeneralInfo() {
         </section>
     );
 }
+
+export function EducationInfo() {
+    const [school, setSchool] = useState('');
+    const [degree, setDegree] = useState('');
+    const [dates, setDates] = useState('');
+
+    function handleSchoolInput(e) {
+        setSchool(e.target.value);
+    }
+
+    function handleDegreeInput(e) {
+        setDegree(e.target.value);
+    }
+
+    function handleDateInput(e) {
+        setDates(e.target.value);
+    }
+
+    return (
+        <section className="education-info">
+            <label>
+                School:{''}
+                <input
+                    value={school}
+                    onInput={handleSchoolInput}
+                />
+            </label>
+            <label>
+                Degree:{''}
+                <input
+                    value={degree}
+                    onInput={handleDegreeInput}
+                />
+            </label>
+            <label>
+                Date:{''}
+                <input
+                    value={dates}
+                    onInput={handleDateInput}
+                />
+            </label>
+        </section>
+    );
+}
+
+export function PracticalExperience() {
+    const [company, setCompany] = useState('');
+    const [positionTitle, setPositionTitle] = useState('');
+    const [responsibilities, setResposibilities] = useState('');
+    const [datesWorked, setDatesWorked] = useState('');
+
+    function handleCompanyInput(e) {
+        setCompany(e.target.value);
+    }
+
+    function handlePositionInput(e) {
+        setPositionTitle(e.target.value);
+    }
+
+    function handleResponsibilitiesInput(e) {
+        setResposibilities(e.target.value);
+    }
+    
+    function handleDatesWorkedInput(e) {
+        setDatesWorked(e.target.value);
+    }
+
+    return (
+        <section className="practical-experience">
+            <label>
+                Company={''}
+                <input 
+                    value={company}
+                    onInput={handleCompanyInput}
+                />
+            </label>
+            <label>
+                Position Title={''}
+                <input 
+                    value={positionTitle}
+                    onInput={handlePositionInput}
+                />
+            </label>
+            <label>
+                Responsibilities={''}
+                <textarea 
+                    value={responsibilities}
+                    onInput={handleResponsibilitiesInput}
+                />
+            </label>
+            <label>
+                Dates Worked={''}
+                <input 
+                    defaultValue='Ex. March 15, 2018 - July 20, 2021'
+                    value={datesWorked}
+                    onInput={handleDatesWorkedInput}
+                />
+            </label>
+        </section>
+    );
+}
