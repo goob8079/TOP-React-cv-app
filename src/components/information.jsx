@@ -96,7 +96,7 @@ export function PracticalExperience({ experience, onChange }) {
                 Responsibilities:{''}
                 <textarea 
                     value={experience.responsibilities}
-                    onInput={(e) => handleChange('resposibilities', e.target.value)}
+                    onInput={(e) => handleChange('responsibilities', e.target.value)}
                 />
             </label>
             <label>

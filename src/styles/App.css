@@ -30,6 +30,7 @@ form {
 
     .general-info {
         display: flex; justify-content: center; align-items: center; gap: 16px;
+        margin: 8px; padding: 8px;
     }
 }
 
@@ -38,10 +39,16 @@ form {
     padding: 12px;
 }
 
-.education-list {
-    min-height: 0;
+.education-list.visible {
+    display: flex;
+}
+.education-list.hidden {
+    display: none;
 }
 
-.experience-list {
-    min-height: 0;
+.experience-list.visible {
+    display: flex;
+}
+.experience-list.hidden {
+    display: none;
 }

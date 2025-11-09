@@ -1,14 +1,15 @@
 import { EducationInfo, GeneralInfo, PracticalExperience } from "./Information";
 
 export function FormEditor({ formData, setFormData, onSubmit }) {
-    const { generalInfo, educationInfo, experienceInfo } = formData;
+    const { generalInfo = {}, educationInfo = [], experienceInfo = [] } = formData;
 
     function updateGeneralInfo(data) {
         setFormData({ ...formData, generalInfo: data});
     }
 
     function addEducation() {
-        setFormData([...formData, { school: '', degree: '', dateFrom: '', dataTo: '', id: crypto.randomUUID() }]);
+        const newEdu = { school: '', degree: '', dateFrom: '', dataTo: '', id: crypto.randomUUID() };
+        setFormData({...formData, educationInfo: [...educationInfo, newEdu]});
     }
 
     function updateEducation(i, updated) {
@@ -24,8 +25,7 @@ export function FormEditor({ formData, setFormData, onSubmit }) {
         setFormData({ ...formData, educationInfo: newList});
     }
 
-    function addExperience(e) {
-        e.preventDefault()
+    function addExperience() {
         const newExp = { company: '', positionTitle: '', responsibilities: '', dateFrom: '', dateTo: '', id: crypto.randomUUID() }
         setFormData({ ...formData, experienceInfo: [...experienceInfo, newExp] });
     }
@@ -46,7 +46,7 @@ export function FormEditor({ formData, setFormData, onSubmit }) {
             <section className="information-section">
                 <GeneralInfo information={generalInfo} onChange={updateGeneralInfo}/>
                 
-                <ul className="education-list">
+                <ul className={`education-list ${educationInfo.length > 0 ? 'visible' : 'hidden'}`}>
                     {/* loop through the educationList and
                     add the new edu object to the ul element as an li element */}
                     {educationInfo.map((edu, index) => (
@@ -61,7 +61,7 @@ export function FormEditor({ formData, setFormData, onSubmit }) {
                 </ul>
                 <button type="button" onClick={(e) => addEducation(e)}>Add Education</button>
 
-                <ul className="experience-list">
+                <ul className={`experience-list ${experienceInfo.length > 0 ? 'visibile' : 'hidden'}`}>
                     {/* loop through the experienceList and
                     add the new exp object to the ul element as an li element */}
                     {experienceInfo.map((exp, index) => (
