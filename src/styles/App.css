@@ -1,0 +1,47 @@
+html {
+    width: 100%; height: 100%;
+    margin: 0; padding: 0;
+}
+
+body {
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+
+form {
+    display: flex; flex-direction: column; justify-content: center;
+    margin: 20px; padding: 12px;
+    border: 2px solid black;
+    
+    ul {
+        list-style: none;
+    }
+
+    button {
+        padding: 12px;
+    }
+
+    label, input, textarea {
+        display: block;
+    }
+}
+
+.information-section {
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+
+    .general-info {
+        display: flex; justify-content: center; align-items: center; gap: 16px;
+    }
+}
+
+.btns-container {
+    display: flex; justify-content: center; align-items: center; gap: 8px;
+    padding: 12px;
+}
+
+.education-list {
+    min-height: 0;
+}
+
+.experience-list {
+    min-height: 0;
+}

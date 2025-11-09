@@ -53,10 +53,17 @@ export function EducationInfo({ education, onChange }) {
                 />
             </label>
             <label>
-                Date:{''}
+                From:{''}
                 <input
-                    value={education.dates}
-                    onInput={(e) => handleChange('dates', e.target.value)}
+                    value={education.dateFrom}
+                    onInput={(e) => handleChange('dateFrom', e.target.value)}
+                />
+            </label>
+            <label>
+                To:{''}
+                <input
+                    value={education.dateTo}
+                    onInput={(e) => handleChange('dateTo', e.target.value)}
                 />
             </label>
         </section>
@@ -72,31 +79,38 @@ export function PracticalExperience({ experience, onChange }) {
     return (
         <section className="practical-experience">
             <label>
-                Company={''}
+                Company:{''}
                 <input 
                     value={experience.company}
                     onInput={(e) => handleChange('company', e.target.value)}
                 />
             </label>
             <label>
-                Position Title={''}
+                Position Title:{''}
                 <input 
                     value={experience.positionTitle}
                     onInput={(e) => handleChange('positionTitle', e.target.value)}
                 />
             </label>
             <label>
-                Responsibilities={''}
+                Responsibilities:{''}
                 <textarea 
                     value={experience.responsibilities}
                     onInput={(e) => handleChange('resposibilities', e.target.value)}
                 />
             </label>
             <label>
-                Dates Worked={''}
-                <input 
-                    value={experience.datesWorked}
-                    onInput={(e) => handleChange('datesWorked', e.target.value)}
+                From:{''}
+                <input
+                    value={experience.dateFrom}
+                    onInput={(e) => handleChange('dateFrom', e.target.value)}
+                />
+            </label>
+            <label>
+                To:{''}
+                <input
+                    value={experience.dateTo}
+                    onInput={(e) => handleChange('dateTo', e.target.value)}
                 />
             </label>
         </section>
