@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { EducationInfo, PracticalExperience } from "./information";
+import { EducationInfo, GeneralInfo, PracticalExperience } from "./information";
 
 export function Form() {
+    const [generalInfo, setGeneralInfo] = useState({ name: '', email: '', phoneNum: ''});
     const [educationList, setEducationList] = useState([]);
     const [experienceList, setExperienceList] = useState([]);
 
@@ -28,6 +29,7 @@ export function Form() {
     return (
         <form>
             <section className="information-section">
+                <GeneralInfo information={generalInfo} onChange={setGeneralInfo}/>
                 <ul className="education-list">
                     {/* loop through the educationList and
                     add the new edu object to the ul element as an li element */}
