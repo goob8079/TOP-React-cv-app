@@ -48,9 +48,10 @@ export function GeneralInfo() {
 }
 
 export function EducationInfo({ education, onChange }) {
+    // lifted the state up to the Form component 
     function handleChange(field, val) {
         onChange({ ...education, [field]: val });
-    } 
+    }
     
     return (
         <section className="education-info">
@@ -80,6 +81,7 @@ export function EducationInfo({ education, onChange }) {
 }
 
 export function PracticalExperience({ experience, onChange }) {
+    // lifted the state up to the Form component 
     function handleChange(field, val) {
         onChange({ ...experience, [field]: val });
     }
