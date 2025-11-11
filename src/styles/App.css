@@ -9,6 +9,7 @@ html {
 
 .top-container {
     display: flex; flex-direction: column; justify-content: center; align-items: center;
+    color: rgb(255, 255, 255);
 }
 
 body {
@@ -19,7 +20,7 @@ body {
 form {
     display: flex; flex-direction: column; justify-content: center;
     margin: 20px; padding: 12px;
-    border: 2px solid black;
+    border: 3px solid black;
     background-color: white;
     
     ul {
@@ -71,7 +72,8 @@ form {
 }
 
 .cv-general-info {
-    display: grid; justify-content: center; padding: 8px;
+    display: grid; justify-content: center;
+    width: 100%;
     grid-template-rows: 1fr 1fr; grid-template-columns: 1fr 1fr;
 
     #gen-name {
@@ -82,6 +84,7 @@ form {
     }    
 
     #gen-email {
+        justify-self: flex-end;
         grid-row: 2;
         padding-right: 12px;
     }
@@ -89,5 +92,25 @@ form {
     #gen-phone {
         grid-row: 2;
         padding-left: 12px;
+    }
+}
+
+.cv-education-info {
+    align-self: flex-start;
+    display: grid; grid-template-rows: 1fr 1fr; align-items: center;
+    width: calc(100%  - 24px); 
+    padding: 12px;
+
+    #education-title {
+        grid-row: 1/2;
+    }
+
+    .education-ul {
+        list-style-type: none;
+        margin: 0;
+    }
+
+    li > b {
+       font-size: 20px; 
     }
 }

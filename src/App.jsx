@@ -4,8 +4,8 @@ import { Form } from './components/form';
 function App() {
   return (
     <>
-      <h1 className='top-container'>CV Creator</h1>
-      <h3 className='top-container'>Input your information below</h3>
+      <h1 className='top-container'><u>CV Creator</u></h1>
+      <h3 className='top-container'><u>Input your information below</u></h3>
       <Form />
     </>
   )
