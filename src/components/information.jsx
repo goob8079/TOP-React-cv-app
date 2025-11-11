@@ -10,6 +10,7 @@ export function GeneralInfo({ information, onChange }) {
                 <input 
                     value={information.name}
                     onInput={(e) => handleChange('name', e.target.value)}
+                    required
                 />
             </label>
             <label>
@@ -17,6 +18,7 @@ export function GeneralInfo({ information, onChange }) {
                 <input 
                     value={information.email}
                     onInput={(e) => handleChange('email', e.target.value)}
+                    required
                 />
             </label>
             <label>
@@ -24,6 +26,7 @@ export function GeneralInfo({ information, onChange }) {
                 <input 
                     value={information.phoneNum}
                     onInput={(e) => handleChange('phoneNum', e.target.value)}
+                    required
                 />
             </label>
         </section>

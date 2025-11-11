@@ -3,14 +3,24 @@ html {
     margin: 0; padding: 0;
 }
 
+#root {
+    width: 50vw;
+}
+
+.top-container {
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+
 body {
     display: flex; flex-direction: column; justify-content: center; align-items: center;
+    background-color: grey;
 }
 
 form {
     display: flex; flex-direction: column; justify-content: center;
     margin: 20px; padding: 12px;
     border: 2px solid black;
+    background-color: white;
     
     ul {
         list-style: none;
@@ -36,7 +46,7 @@ form {
 
 .btns-container {
     display: flex; justify-content: center; align-items: center; gap: 8px;
-    padding: 12px;
+    margin: 8px;
 }
 
 .education-list.visible {
@@ -51,4 +61,33 @@ form {
 }
 .experience-list.hidden {
     display: none;
+}
+
+.cv-container {
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    margin: 12px;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.cv-general-info {
+    display: grid; justify-content: center; padding: 8px;
+    grid-template-rows: 1fr 1fr; grid-template-columns: 1fr 1fr;
+
+    #gen-name {
+        justify-self: center;
+        grid-row: 1;
+        grid-column: span 2;
+        font-size: 30px;
+    }    
+
+    #gen-email {
+        grid-row: 2;
+        padding-right: 12px;
+    }
+
+    #gen-phone {
+        grid-row: 2;
+        padding-left: 12px;
+    }
 }

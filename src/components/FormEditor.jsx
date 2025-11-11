@@ -55,11 +55,11 @@ export function FormEditor({ formData, setFormData, onSubmit }) {
                                 education={edu} 
                                 onChange={(updatedEdu) => updateEducation(index, updatedEdu)}  
                             />
-                            <button type="button" onClick={() => removeEducation(index)}>Remove</button>
+                            <button className="btns-container" type="button" onClick={() => removeEducation(index)}>Remove</button>
                         </li>
                     ))}
                 </ul>
-                <button type="button" onClick={(e) => addEducation(e)}>Add Education</button>
+                <button className="btns-container" type="button" onClick={(e) => addEducation(e)}>Add Education</button>
 
                 <ul className={`experience-list ${experienceInfo.length > 0 ? 'visibile' : 'hidden'}`}>
                     {/* loop through the experienceList and
@@ -70,11 +70,11 @@ export function FormEditor({ formData, setFormData, onSubmit }) {
                                 experience={exp}
                                 onChange={(updatedExperience) => updateExperience(index, updatedExperience)}
                             />
-                            <button type="button" onClick={() => removeExperience(index)}>Remove</button>
+                            <button className="btns-container" type="button" onClick={() => removeExperience(index)}>Remove</button>
                         </li>
                     ))}
                 </ul>
-                <button type="button" onClick={(e) => addExperience(e)}>Add Experience</button>
+                <button className="btns-container" type="button" onClick={(e) => addExperience(e)}>Add Experience</button>
             </section>
 
             <div className="btns-container">
