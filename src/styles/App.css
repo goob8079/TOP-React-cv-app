@@ -10,6 +10,7 @@ html {
 .top-container {
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     color: rgb(255, 255, 255);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -95,22 +96,43 @@ form {
     }
 }
 
-.cv-education-info {
+.cv-education-info, .cv-experience-info {
     align-self: flex-start;
     display: grid; grid-template-rows: 1fr 1fr; align-items: center;
     width: calc(100%  - 24px); 
     padding: 12px;
+}
 
+.cv-education-info {
     #education-title {
         grid-row: 1/2;
     }
-
+    
     .education-ul {
+        list-style-type: none;
+        margin: 0;
+    }
+    
+    li > b {
+       font-size: 20px; 
+    }
+}
+
+.cv-experience-info {
+    #experience-title {
+        grid-row: 1/2;
+    }
+    
+    .experience-ul {
         list-style-type: none;
         margin: 0;
     }
 
     li > b {
        font-size: 20px; 
+    }
+
+    ul > li {
+        list-style: none;
     }
 }

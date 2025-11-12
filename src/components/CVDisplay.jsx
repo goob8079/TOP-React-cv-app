@@ -27,12 +27,12 @@ export function CVDisplay({ formData, onEdit }) {
                 }
             </div>
             <div className="cv-experience-info">
-                <h2>Experience</h2>
+                <h2 id="experience-title">Experience</h2>
                 {/* if experienceInfo list has nothing then display 'No Experience' */}
                 {experienceInfo.length > 0 ?
                     experienceInfo.map((el) => (
                         <ul className="experience-ul" key={el.id}>
-                            <li>Company: {el.company}</li>
+                            <li><b>Company: {el.company}</b></li>
                             <ul>
                                 <li>Position: {el.positionTitle}</li>
                                 <li>Dates Worked: {el.dateFrom} to {el.dateTo}</li>
