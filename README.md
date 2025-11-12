@@ -15,7 +15,7 @@ At the moment, there are no features like exporting it to PDF (might add eventua
     <ol>
       <li>Node.js</li>
       <li>React.js</li>
-      <li>Vite</li>>
+      <li>Vite</li>
       <li>Vercel (for deployment)</li>
     </ol>
   </li>
