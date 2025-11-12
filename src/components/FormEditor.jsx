@@ -1,4 +1,4 @@
-import { EducationInfo, GeneralInfo, PracticalExperience } from "./Information";
+import { EducationInfo, GeneralInfo, PracticalExperience } from "./information";
 
 export function FormEditor({ formData, setFormData, onSubmit }) {
     const { generalInfo = {}, educationInfo = [], experienceInfo = [] } = formData;
