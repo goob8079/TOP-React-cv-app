@@ -61,7 +61,7 @@ export function FormEditor({ formData, setFormData, onSubmit }) {
                 </ul>
                 <button className="btns-container" type="button" onClick={(e) => addEducation(e)}>Add Education</button>
 
-                <ul className={`experience-list ${experienceInfo.length > 0 ? 'visibile' : 'hidden'}`}>
+                <ul className={`experience-list ${experienceInfo.length > 0 ? 'visible' : 'hidden'}`}>
                     {/* loop through the experienceList and
                     add the new exp object to the ul element as an li element */}
                     {experienceInfo.map((exp, index) => (

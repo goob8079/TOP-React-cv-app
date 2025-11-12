@@ -52,14 +52,24 @@ form {
 }
 
 .education-list.visible {
-    display: flex;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    padding: 12px;
+
+    button {
+        margin: 12px auto;
+    }
 }
 .education-list.hidden {
     display: none;
 }
 
 .experience-list.visible {
-    display: flex;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    padding: 12px;
+
+    button {
+        margin: 12px auto;
+    }
 }
 .experience-list.hidden {
     display: none;
@@ -135,4 +145,40 @@ form {
     ul > li {
         list-style: none;
     }
+}
+
+@media (max-width: 1024px) {
+    #root {
+        height: 150vw;
+    }
+
+    form {
+        position: absolute; left: 50%;
+        transform: translateX(-50%);
+        width: 70vw;
+        margin: 0 auto;
+    }
+
+    .general-info {
+        display: flex; flex-direction: column; justify-content: center; align-content: center;
+    }
+
+    .cv-container {
+        position: absolute; left: 50%;
+        transform: translateX(-50%);
+        width: 70vw;
+        margin: 0 auto;
+    }
+
+    .cv-general-info {
+        #gen-email {
+            padding-left: 12px;
+        }
+
+        #gen-phone {
+            justify-self: flex-start;
+            padding-left: 12px;
+        }
+    }
+
 }
